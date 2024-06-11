@@ -5,7 +5,7 @@
 !wget -q https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth <br>
 ```
 
-or from this direct-link and place it in your repository folder. 
+or from this [direct-link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and place it in your repository folder. 
 
 2. For running the VST / saliency strategy, please refer to these [instructions](https://github.com/yhydhx/SAMAug/tree/a7dce8878d56d2a265bd2819de3246c726e4adb4/vst_main):
 
