@@ -4,7 +4,8 @@ Our statistical analysis and baseline comparisons not only highlight that humans
 
 # Dataset
 Access the **dataset** [here](https://zenodo.org/records/11187949).
-The above dataset has two zip files: **Image datasets.zip** and **Prompting data.zip**.
+This dataset has two zip files: **Image datasets.zip** and **Prompting data.zip**.
+
 **Image datasets.zip** contains all image datasets, along with ground truth labels. For each image dataset, there are 400 image-ground truth mask pairs. The image and ground truth masks are formatted as .npy arrays.
 **Prompting data.zip** contains prompting data collected from human annotators. The structure appears as the following:
 
@@ -12,11 +13,11 @@ The above dataset has two zip files: **Image datasets.zip** and **Prompting data
 Prompting Results
 ├── Baseball bat                                 # Image dataset
     ├── st1                                      # Human annotator # 1
-        ├── eachround
-        ├── masks
-        ├── points
-        ├── scores
-        ├── sorts
+        ├── eachround                            # List of length t (number of timestamps); indicates which timesteps belong to each of the two rounds (if they exist)
+        ├── masks                                # Contains the binary masks produced for each image, in format a_b_mask.png, where 'a' corresponds to the image number (0 to 399) and 'b' indexes through timestamps in the prompting process
+        ├── points                               # Contains inclusion and exclusion points formatted as a_green.npy and a_red.npy respectively, where 'a' corresponds to the image number
+        ├── scores                               # Contains the scores at each timestep for every image (mIoU)
+        ├── sorts                                # Contains sorted timestamp indexes, going from max to min based on the score
     ├── st2                                      # Human annotator # 2 (same structure as st1)
         .
         .
