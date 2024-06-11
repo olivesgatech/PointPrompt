@@ -34,6 +34,28 @@ Prompting Results
 
 # Code Usage
 
+Please download the weights for SAM via:
+
+```
+!wget -q https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth <br>
+```
+
+or from this [direct-link](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth) and place it in your repository folder. 
+
+**Point Sampling Strategy Experiments:**
+1. Go to the `point_sampling` directory
+2. Make sure you read `Instructions.md`. If you wish to run the `Saliency` strategy, follow instructions to download the appropriate items.
+3. The main script (``python3 main.py``) runs the code. You will need to alter `--img_dir` to the folder which keeps the image datasets (download above). You will also need to adjust `--results_dir` to where you wish for the results to be saved. Additionally, `--home_dir` should be the directory where the pretrained weights are located within the repository.
+4. You can specify which strategy you wish to run by altering the `--query_strategy` parameter.
+
+**Finetuning:**
+
 # Links
+
+Automated point selection strategies:
+
+[SAMAug](https://github.com/yhydhx/SAMAug)
+
+[SAM-PT](https://github.com/SysCV/sam-pt)
 
 # Citation
