@@ -8,7 +8,7 @@ The above dataset has two zip files: **Image datasets.zip** and **Prompting data
 **Image datasets.zip** contains all image datasets, along with ground truth labels. For each image dataset, there are 400 image-ground truth mask pairs. The image and ground truth masks are formatted as .npy arrays.
 **Prompting data.zip** contains prompting data collected from human annotators. The structure appears as the following:
 
-`
+```
 Prompting Results
 ├── Baseball bat                                 # Image dataset
     ├── st1                                      # Human annotator # 1
@@ -29,7 +29,7 @@ Prompting Results
 .
 .
 ├── Tie
-`
+```
 
 # Code Usage
 
