@@ -32,6 +32,7 @@ def parse():
     parser.add_argument('--query_strategy', type=str, default='saliency',
                         choices=['rand', 'shi-tomasi', 'kmediod', 'entropy', 'max_dist', 'saliency', 'obj'])
     parser.add_argument('--img_dir', type=str, default='/media/zoe/HD/Datasets/Image datasets/Datasets/')
+    parser.add_argument('--home_dir', type=str, default='/home/zoe/point_sampling/') # For pretrained stuff
     parser.add_argument('--results_dir', type=str, default='/home/zoe/Dropbox (GhassanGT)/Zoe/InSync/PhDResearch/Code/Results/NeurIPS2024/Results/')
     parser.add_argument('--num_pts_mode', type=str, default='avg')
     args = parser.parse_args()
@@ -47,7 +48,7 @@ def main():
     model_type = "vit_h"
 
     device = "cuda"
-    sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
+    sam = sam_model_registry[model_type](checkpoint=args.home_dir + sam_checkpoint)
     sam.to(device=device)
 
     predictor = SamPredictor(sam)
