@@ -97,6 +97,7 @@ Image datasets        # Image dataset
     ├── Tie
 ```
 So the Image datasets folder contain the prompting strategies files, also the images files under samples, and labels (ground truth) file.
+
 1- Download the requirements: 
 ```
 pip install -r requirements.txt
