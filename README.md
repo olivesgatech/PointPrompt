@@ -49,7 +49,7 @@ or from this [direct-link](https://dl.fbaipublicfiles.com/segment_anything/sam_v
 4. You can specify which strategy you wish to run by altering the `--query_strategy` parameter.
 
 **Finetuning:**
-For finetuning the structure of the dataset should be altered to look this way: 
+For finetuning the structure of the dataset should be **altered** to look this way: 
 ```
 Image datasets        # Image dataset
 ├── human             # the first prompting strategy. the human is a special case since it contains multiple prompt sets for each image
