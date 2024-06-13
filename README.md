@@ -64,7 +64,7 @@ Image datasets        # Image dataset
         ├── st3_399_green.npy # the inclusion points for third user (st3) done on the 399 image (_399_) 
         ├── st3_399_red.npy # the exclusion points for third user (st3) done on the 399 image (_399_) 
     ├── Tie
-├── entropy
+├── entropy # the other prompting strategies do no have multiple prompting sets for each image.
     ├── Baseball bat  # the dataset type            
         ├── 0_green.npy # the inclusion points done on the first image (_0_) 
         ├── 0_red.npy # the exclusion points done on the first image (_0_)
