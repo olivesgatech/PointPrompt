@@ -49,7 +49,18 @@ or from this [direct-link](https://dl.fbaipublicfiles.com/segment_anything/sam_v
 4. You can specify which strategy you wish to run by altering the `--query_strategy` parameter.
 
 **Finetuning:**
-
+1- Download the requirements: 
+```
+pip install -r requirements.txt
+```
+2- To finetune the prompt encoder based on each prompting method. The weights will be saved by the strategy name: 
+```
+python train.py --path "Image datasets" --train_ratio 0.8 --path_to_sam "sam_vit_h_4b8939.pth" 
+```
+3- Test each model on all data and save the results in an excel sheet.
+```
+python inference.py --path "Image datasets" 
+```
 # Links
 
 Automated point selection strategies:
