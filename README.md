@@ -49,6 +49,54 @@ or from this [direct-link](https://dl.fbaipublicfiles.com/segment_anything/sam_v
 4. You can specify which strategy you wish to run by altering the `--query_strategy` parameter.
 
 **Finetuning:**
+For finetuning the structure of the data should look this way: 
+```
+Image datasets        # Image dataset
+├── human             # the first prompting strategy. the human is a special case since it contains multiple prompt sets for each image
+    ├── Baseball bat  # the dataset type            
+        ├── st1_0_green.npy # the inclusion points for first user (st1) done on the first image (_0_) 
+        ├── st1_0_red.npy # the exclusion points for first user (st1) done on the first image (_0_)
+        ├── st1_1_green.npy # the inclusion points for first user (st1) done on the second image (_1_) 
+        ├── st1_1_red.npy # the exclusion points for first user (st1) done on the second image (_1_) 
+        .
+        .
+        .
+        ├── st3_399_green.npy # the inclusion points for third user (st3) done on the 399 image (_399_) 
+        ├── st3_399_red.npy # the exclusion points for third user (st3) done on the 399 image (_399_) 
+    ├── Tie
+├── entropy
+    ├── Baseball bat  # the dataset type            
+        ├── 0_green.npy # the inclusion points done on the first image (_0_) 
+        ├── 0_red.npy # the exclusion points done on the first image (_0_)
+        .
+        .
+        .
+        ├── 399_green.npy # the inclusion points done on the 399 image (_399_) 
+        ├── 399_red.npy # the exclusion points done on the 399 image (_399_) 
+    ├── Tie
+.
+.
+.
+├── samples
+    ├── Baseball bat  # the dataset type            
+        ├── 0_sample.npy # the first image in the Baseball bat dataset 
+        ├── 1_sample.npy # the second image in the Baseball bat dataset 
+        .
+        .
+        .
+        ├── 399_sample.npy # the 399th image in the Baseball bat dataset
+    ├── Tie
+├── labels
+    ├── Baseball bat  # the dataset type            
+        ├── 0_label.npy # the first ground truth mask in the Baseball bat dataset 
+        ├── 1_label.npy # the second ground truth mask in the Baseball bat dataset 
+        .
+        .
+        .
+        ├── 399_label.npy # the 399th ground truth mask in the Baseball bat dataset
+    ├── Tie
+```
+So the Image datasets folder contain the prompting strategies files, also the images files under samples, and labels (ground truth) file.
 1- Download the requirements: 
 ```
 pip install -r requirements.txt
