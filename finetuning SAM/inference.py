@@ -250,7 +250,7 @@ results_df['Category'] = datasets
 # Iterate over models and datasets, and store the results
 for m in models: 
     print(m)
-    model = sam_model_registry["vit_h"](checkpoint=f'/home/hice1/malotaibi44/scratch/prompt/models/{m.lower()}.pth')
+    model = sam_model_registry["vit_h"](checkpoint=f'{m.lower()}.pth')
     for model_name in models:
         print(model_name)
         if model_name.lower() == 'human':
