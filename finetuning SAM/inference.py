@@ -232,7 +232,8 @@ def evaluate_human_model(testdataset):
 
 # Process filenames to exclude everything before "Image datasets"
 prnames = [ os.path.normpath(filename.split('samples/')[1:] [0]) for filename in test_filenames]
-
+parser = argparse.ArgumentParser(description='Settings')    
+parser.add_argument('--path', type=str, help='The path to the prompt datasets')
 columns = ['Category'] + [f'{key} mIOU' for key in models]
 models = [
    'human' ,
