@@ -109,7 +109,19 @@ python train.py --path "Image datasets" --train_ratio 0.8 --path_to_sam "sam_vit
 3- Test each model on all data and save the results in an excel sheet.
 ```
 python inference.py --path "Image datasets" 
+
 ```
+
+**Feature extraction:**
+To extract the image, prompt and general-level features described in the paper, first make sure you have downloaded both the image and the prompt data and stored it into corresponding folders. First download the required packages:
+```
+pip install -r requirements.txt
+```
+and then run the feature extractions script providing the paths where the data is stored:
+```
+python gather_statistics.py --data_path "\path\to\images" --prompts_path "\path\to\prompts"
+```
+
 # Links
 
 Automated point selection strategies:
