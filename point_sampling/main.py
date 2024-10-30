@@ -31,9 +31,9 @@ def parse():
     parser = argparse.ArgumentParser(description="point sampling")
     parser.add_argument('--query_strategy', type=str, default='saliency',
                         choices=['rand', 'shi-tomasi', 'kmediod', 'entropy', 'max_dist', 'saliency', 'obj'])
-    parser.add_argument('--img_dir', type=str, default='/media/zoe/HD/Datasets/Image datasets/Datasets/')
-    parser.add_argument('--home_dir', type=str, default='/home/zoe/point_sampling/') # For pretrained stuff
-    parser.add_argument('--results_dir', type=str, default='/home/zoe/Dropbox (GhassanGT)/Zoe/InSync/PhDResearch/Code/Results/NeurIPS2024/Results/')
+    parser.add_argument('--img_dir', type=str, default='dataset_path')
+    parser.add_argument('--home_dir', type=str, default='path_to_home') # For pretrained stuff
+    parser.add_argument('--results_dir', type=str, default='/example_results_path/')
     parser.add_argument('--num_pts_mode', type=str, default='avg')
     args = parser.parse_args()
     return args
