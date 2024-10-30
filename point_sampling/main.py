@@ -6,7 +6,7 @@ import glob
 from intelligent_point_selection import get_saliency_point
 from point_selection import *
 
-# Number of best inclusion / exclusion points recorded from students [inclusion, exclusion]
+# Number of best inclusion / exclusion points recorded from annotators [inclusion, exclusion]
 point_nums = {
     'Baseball bat': [4, 2],
     'Bird': [9, 1],
