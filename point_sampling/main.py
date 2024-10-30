@@ -91,7 +91,7 @@ def main():
         for i in range(len(ground_truth)): #len(ground_truth)
             #print('img: ', i)
             if args.num_pts_mode == 'avg':
-                # 'Avg' refers to using the average inclusion/exclusion points used for the students
+                # 'Avg' refers to using the average inclusion/exclusion points used for annotators
                 inclusion = point_nums[cur][0]
                 exclusion = point_nums[cur][1]
             else:
