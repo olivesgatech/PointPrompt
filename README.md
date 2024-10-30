@@ -131,3 +131,7 @@ Automated point selection strategies:
 [SAM-PT](https://github.com/SysCV/sam-pt)
 
 # Citation
+
+J. Quesada∗, Z. Fowler∗, M. Alotaibi, M. Prabhushankar, and G. AlRegib, ”Benchmarking Human and
+Automated Prompting in the Segment Anything Model”, In IEEE International Conference on Big Data
+2024, Washington DC, USA
